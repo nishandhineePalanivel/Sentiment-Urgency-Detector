@@ -97,6 +97,27 @@ DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your_webhook_id/your_webhoo
 
 ---
 
+## 📝 Sample Ticket Inputs
+
+Copy-paste any of these into the **Ticket Content** field to try the analyzer:
+
+**1. Angry Customer — Billing Issue**
+> I've been charged twice for the same subscription this month and nobody is responding to my emails. If this isn't resolved within 24 hours, I'm disputing the charge with my bank and cancelling everything.
+
+**2. Happy Customer — Positive Feedback**
+> Just wanted to say your new dashboard update is fantastic! The interface is so much cleaner and faster now. Keep up the amazing work, your team really nailed this release.
+
+**3. Frustrated Customer — Technical Bug**
+> My account has been locked for three days now and I can't access any of my saved projects. I've already submitted two tickets with no reply. This is completely unacceptable for a paid plan.
+
+**4. Confused Customer — Feature Question**
+> Hi, I'm trying to export my reports as PDF but I can't find the option anywhere. Is this feature available on the free plan or do I need to upgrade? Any help would be appreciated, thanks.
+
+**5. Urgent Escalation — Service Outage**
+> Our entire team of 50 people has been unable to log in since this morning. We have a critical client presentation in 2 hours and all our data is on your platform. This needs to be fixed IMMEDIATELY.
+
+---
+
 ## Architecture Overview
 
 Sentinel is designed with a modern, lightweight, and blazing fast architecture:
