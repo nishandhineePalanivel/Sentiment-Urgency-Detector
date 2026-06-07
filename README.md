@@ -97,42 +97,6 @@ DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your_webhook_id/your_webhoo
 
 ---
 
-## 🚀 Deployment
-
-This project is **deployed and hosted for free** on **[Render](https://render.com)**.
-
-| Detail | Value |
-|---|---|
-| **Platform** | [Render](https://render.com) — Cloud Application Hosting |
-| **Plan** | Free Tier ($0/month) |
-| **Runtime** | Python 3.11 |
-| **Live URL** | [https://sentiment-urgency-detector.onrender.com](https://sentiment-urgency-detector.onrender.com/) |
-
-### How It's Deployed
-
-1. The GitHub repository is connected directly to Render via their Git integration.
-2. On every push to `main`, Render automatically **rebuilds and redeploys** the application.
-3. Environment variables (`GROQ_API_KEY`, `DISCORD_WEBHOOK_URL`) are securely configured in the Render dashboard — never committed to source code.
-4. The deployment configuration is defined in [`render.yaml`](render.yaml):
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn backend.api.main:app --host 0.0.0.0 --port $PORT`
-
-### Deploy Your Own Instance
-
-1. **Fork** this repository on GitHub.
-2. Sign up at [render.com](https://render.com) with your GitHub account (free).
-3. Click **New + → Web Service** → connect your forked repo.
-4. Render auto-detects settings from `render.yaml`.
-5. Add your own environment variables:
-   - `GROQ_API_KEY` — get one free at [console.groq.com](https://console.groq.com)
-   - `DISCORD_WEBHOOK_URL` — create one in your Discord server settings
-6. Select the **Free** plan → click **Create Web Service**.
-7. Your instance will be live in ~2–3 minutes.
-
-> **Note:** The free tier auto-sleeps after 15 minutes of inactivity. The first request after sleep takes ~30–60 seconds to cold-start.
-
----
-
 ## Architecture Overview
 
 Sentinel is designed with a modern, lightweight, and blazing fast architecture:
@@ -215,6 +179,45 @@ Permanently deletes a ticket from the SQLite database. Returns status `200 OK` o
 
 ### `GET /health`
 Liveness check for deployment monitoring. Returns `{"status":"ok", "model":"llama-3.3-70b-versatile"}`.
+
+---
+
+## 🚀 Deployment
+
+This application is **live and publicly deployed** on **[Render](https://render.com)** — a free cloud hosting platform for web services.
+
+🔗 **Live URL**: [https://sentiment-urgency-detector.onrender.com](https://sentiment-urgency-detector.onrender.com/)
+
+### Deployment Configuration
+
+| Setting | Value |
+|---|---|
+| **Platform** | [Render](https://render.com) (Free Tier) |
+| **Runtime** | Python 3.11 |
+| **Build Command** | `pip install -r requirements.txt` |
+| **Start Command** | `uvicorn backend.api.main:app --host 0.0.0.0 --port $PORT` |
+| **Blueprint** | Defined in `render.yaml` |
+| **Auto-Deploy** | ✅ Triggered on every push to `main` branch |
+
+### How to Deploy Your Own Instance
+
+1. **Fork** this repository on GitHub.
+2. Sign up at [render.com](https://render.com) using your GitHub account (free, no credit card needed).
+3. Click **New +** → **Web Service** → connect your forked repo.
+4. Render auto-detects settings from `render.yaml`. Verify the build and start commands match the table above.
+5. Add the following **Environment Variables** in the Render dashboard:
+
+   | Key | Where to Get It |
+   |---|---|
+   | `GROQ_API_KEY` | [console.groq.com](https://console.groq.com) → API Keys (free tier available) |
+   | `DISCORD_WEBHOOK_URL` | Discord → Server Settings → Integrations → Webhooks |
+
+6. Select the **Free** plan and click **Create Web Service**.
+7. Wait ~2–3 minutes for the build to complete. Your app will be live at `https://your-app-name.onrender.com`.
+
+### Free Tier Notes
+
+> ⚠️ Render's free tier spins the service down after **15 minutes of inactivity**. The first request after a sleep period takes ~30–60 seconds (cold start). Subsequent requests are instant.
 
 ---
 
