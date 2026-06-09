@@ -7,6 +7,9 @@ Sentinel is a real-time, AI-powered customer support ticket analyzer. Built on a
 
 It automatically scores tickets for **Sentiment (1-10)**, **Urgency (1-10)**, detects the **Tone**, evaluates the **Churn Risk**, and generates a **Draft Reply**. If a ticket is classified as high-risk, Sentinel immediately fires an asynchronous webhook alert to a dedicated **Discord** channel.
 
+DEMO VIDEO LINK : https://drive.google.com/file/d/1VVjRRWWC8ebuuat5KVG---N2jvPlOpsa/view?usp=sharing
+
+
 ---
 
 ## 🛠️ Tech Stack
