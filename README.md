@@ -9,16 +9,6 @@ It automatically scores tickets for **Sentiment (1-10)**, **Urgency (1-10)**, de
 
 ---
 
-## 📸 Dashboard Preview
-
-### Real-Time Ticket Analysis Sandbox
-![Dashboard Top Section](C:\Users\sanja\.gemini\antigravity-ide\brain\eabe0af2-2d23-43e8-8015-840b8442a83e\obsidian_top_1780695804457.png)
-
-### Live Ticket History & Glowing Table Rows
-![Ticket History Section](C:\Users\sanja\.gemini\antigravity-ide\brain\eabe0af2-2d23-43e8-8015-840b8442a83e\obsidian_history_1780695826680.png)
-
----
-
 ## 🛠️ Tech Stack
 
 - **Backend Framework**: FastAPI (Python 3.11+)
